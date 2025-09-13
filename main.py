@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, redirect
 from classes import UserContact
 from functions import save_contact
 
@@ -11,7 +11,7 @@ def index():
         useremail = request.form["user_email"]
         contact = UserContact(username,useremail)
         save_contact(contact)
-        return f"Usuário {username} e {useremail} registrado com sucesso!"
+        return redirect('/')
     return render_template("index.html")
 
 
