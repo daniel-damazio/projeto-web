@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contatos</title>
+</head>
+<body>
+<h1>Lista de Contatos</h1>
+
+<table border="1">
+    <tr>
+        <th>Nome</th>
+        <th>Email</th>
+    </tr>
+
+    {% for contact in contacts %}
+    <tr>
+        <td>{{ contact.name }}</td>
+        <td>{{ contact.email }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<button onclick="window.location.href='/'">Voltar ao formulário</button>
+</body>
+</html>
